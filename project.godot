@@ -9,7 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "Unit",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://src/Enemy.gd"
+}, {
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://src/Unit.gd"
 } ]
 _global_script_class_icons={
+"Enemy": "",
 "GitAPI": "",
 "Projectile": "",
 "Unit": ""
@@ -33,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Poring Hunters"
-run/main_scene="res://src/test.tscn"
+run/main_scene="res://src/Game.tscn"
 config/icon="res://icon.png"
 
 [editor]

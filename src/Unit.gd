@@ -6,6 +6,8 @@ var speed := Vector2(300.0, 300.0) setget speed_set, speed_get
 var velocity := Vector2.ZERO
 var damage := 10.0
 var direction := Vector2.ZERO
+var shape_id : RID
+var current_position : Vector2
 
 func hp_set(value: float) -> void:
 	hp = value
