@@ -1,0 +1,68 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "EditorVCSInterface",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Node2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://src/Projectile.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Unit",
+"language": "GDScript",
+"path": "res://src/Unit.gd"
+} ]
+_global_script_class_icons={
+"GitAPI": "",
+"Projectile": "",
+"Unit": ""
+}
+
+[application]
+
+config/name="Poring Hunters"
+run/main_scene="res://src/test.tscn"
+config/icon="res://icon.png"
+
+[editor]
+
+version_control/autoload_on_startup=true
+version_control/plugin_name="GitAPI"
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[layer_names]
+
+2d_render/layer_1="player"
+2d_render/layer_2="enemy"
+2d_render/layer_3="entity"
+2d_render/layer_4="world"
+2d_render/layer_5="projectiles"
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="entity"
+2d_physics/layer_4="world"
+2d_physics/layer_5="projectiles"
+2d_physics/layer_1.64="player"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
