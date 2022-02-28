@@ -8,7 +8,6 @@ var expirience := 0.0 setget expirience_set, expirience_get
 var expirienceToLevel := 100.0 setget expirienceToLevel_set, expirienceToLevel_get
 
 func _ready() -> void:
-
 	pass
 
 func _physics_process(delta: float) -> void:
