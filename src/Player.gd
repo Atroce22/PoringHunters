@@ -7,6 +7,7 @@ var level := 1 setget level_set, level_get
 var expirience := 0.0 setget expirience_set, expirience_get
 var expirienceToLevel := 100.0 setget expirienceToLevel_set, expirienceToLevel_get
 var enemies : Array = []
+var expirience_list : Array = []
 var closest_target
 
 func _ready() -> void:
@@ -65,9 +66,18 @@ func expirienceToLevel_get() -> float:
 func set_enemy_list(list : Array) -> void:
 	enemies = list
 
+func set_expirience_list(list : Array) -> void:
+	expirience_list = list
+
 func _on_Timer_timeout() -> void:
 	var missile = magicMissile.instance()
 	get_parent().add_child(missile)
 	missile.position = self.position
 	missile.velocity = missile.speed * directionToTarget
 	missile.set_enemy_list(enemies)
+
+
+
+func _on_Area2D_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	expirience_list[area_shape_index].active = false
+	self.expirience = expirience_list[area_shape_index].expirience

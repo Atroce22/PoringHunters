@@ -1,9 +1,10 @@
 extends Unit
 class_name Enemy
-onready var expScene = load("res://src/Expirience.tscn")
+#onready var expScene = load("res://src/Expirience.tscn")
 
 var lifetime : float = 0.0
 var dead := false
+
 
 func _ready() -> void:
 	self.speed = Vector2(250.0, 250.0)

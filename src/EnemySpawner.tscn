@@ -10,3 +10,9 @@ enemy_image = ExtResource( 2 )
 [node name="Origin" type="Position2D" parent="."]
 
 [node name="SharedArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 25
+
+[node name="ExpArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
