@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	for player in get_tree().get_nodes_in_group("Player"):
 		boundary_rect = Rect2(player.position - screen_size, screen_size * 2)
 	enemy_spawner_area.set_bounding_box(boundary_rect)
+
 	player.set_enemy_list(enemy_spawner_area.enemies)
 
 func _on_Timer_timeout() -> void:
