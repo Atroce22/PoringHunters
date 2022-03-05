@@ -52,7 +52,6 @@ func expirience_set(value: float) -> void:
 	if expirience >= expirienceToLevel:
 		expirience -= expirienceToLevel
 		self.level += 1
-	print(expirience, " ", level)
 
 func expirience_get() -> float:
 	return expirience
@@ -75,8 +74,6 @@ func _on_Timer_timeout() -> void:
 	missile.position = self.position
 	missile.velocity = missile.speed * directionToTarget
 	missile.set_enemy_list(enemies)
-
-
 
 func _on_Area2D_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	expirience_list[area_shape_index].active = false

@@ -9,7 +9,7 @@ var boundary_rect : Rect2
 var closest_target
 
 func _ready() -> void:
-	timer.start(1)
+	timer.start(0.5)
 
 func _process(delta: float) -> void:
 	for player in get_tree().get_nodes_in_group("Player"):

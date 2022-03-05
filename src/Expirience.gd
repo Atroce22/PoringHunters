@@ -12,9 +12,3 @@ func expirience_set(value: float) -> void:
 func expirience_get() -> float:
 	return expirience
 
-func _physics_process(delta: float) -> void:
-#	for i in get_tree().get_nodes_in_group("Player"):
-#		if $".".overlaps_body(i):
-#			i.expirience = expirience
-#			$".".queue_free()
-	pass
